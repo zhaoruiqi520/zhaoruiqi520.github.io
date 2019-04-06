@@ -1,57 +1,90 @@
-#wrapper{
-    padding-top:50px;
-    width:350px;
-    height:300px;
-    margin: 0 auto;
-    background: rgb(241, 238, 194);
+*{
+    padding: 0;
+    margin:0;
+    text-decoration:none;
+    list-style:none;
 }
-h1{
-    text-align: center;
-    color:#2fcf52;
-    text-shadow: red 2px 2px 2px ,
-    green 2px 2px 2px ,
-    red 2px 2px 2px ;
-}
-p{
-    padding-left: 20px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 18px;
-    color:#5c46c0;
-}
-img{
-    width:20px;
-    height:20px;
-    vertical-align: middle;
-}
-.us{
-    font-size: 15px;
-    height:20px;
-    margin-left: 10px;
-    outline: #c6fd86 2px solid;
-}
-.us:hover{
-    outline: #8d7bcf 2px solid;
-}
-.us:active{
-    outline: #8a7bcf 2px solid;
-}
-#su{
+#canvas{
+    background: #000;
     display: block;
-    width: 40px;
-    height:40px;
 }
-#sub{
-    margin-left: 240px;
-    display: block;
-    width: 40px;
-    height:40px;
-    border: #888 1px solid;
-    background: url(sub.png);
-    background-size: 100% 100%;
+.contain{
+margin:50px auto;
+width:70%;
+position:absolute;
+top:2%;
+left:25%;
 }
-#sub:hover{
-    background: url(sub_selected.png);
-    background-size: 100% 100%;
-    border: #2fcf52 1px solid;
+body{
+background:#ccc;
+}
+.contain .menu{
+height:40px;
+}
+.menu li{
+text-align:center;
+width:140px;
+background:linear-gradient(#3d3838cc,#999);
+position:relative;
+}
+.menu,li{
+float:left;
+}
+.menu li:first-child{
+border-radius:5px 0 0 0;
+}
+.menu,a{
+color:black;
+padding:0 25px;
+font-size:18px;
+line-height:30px;
+display:block;
+border-left:3px solid rgba(0,0,0,0);
+text-transform:uppercase;
+}
+.menu li:hover{
+background:linear-gradient(#111111,#424242);
+}
+.menu li:hover>a{
+color:white;
+border-left:3px solid #fff;
+}
+.twomenu{
+max-height:0px;
+position:absolute;
+left:0;
+top:100%;
+z-index:0;
+perspective:400px;
+}
+.twomenu li{
+opacity:0;
+transform:rotate3d(0,1,0,90Deg);
+transition:opacity 0.4s,transform 0.5s;
+}
+.menu>li:hover .twomenu li{
+opacity:1;
+transform:rotate3d(0,0,0,0Deg);
+}
+.menu>li:hover .twomenu{
+max-height:1000px;
+z-index:9;
+}
+.twomenu li:nth-child(1){
+transition-delay:0ms;
+}
+.twomenu li:nth-child(2){
+transition-delay:100ms;
+}
+.twomenu li:nth-child(3){
+transition-delay:200ms;
+}
+.twomenu li:nth-child(4){
+transition-delay:300ms;
+}
+.twomenu li:nth-child(5){
+transition-delay:400ms;
+}
+.twomenu li:nth-child(6){
+transition-delay:500ms;
 }
